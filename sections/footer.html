@@ -1,0 +1,56 @@
+<footer class="bg-black text-white px-6 py-12 mt-20 relative">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+    
+    <!-- About -->
+    <div>
+      <h4 class="text-lg font-bold mb-4 tracking-widest">ABOUT</h4>
+      <p class="text-sm leading-relaxed text-gray-300">
+        This project is built with a focus on clean design, usability, and simplicity. <br />
+        Feel free to reach out for feedback or collaboration opportunities.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h4 class="text-lg font-bold mb-4 tracking-widest">QUICK LINKS</h4>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li><a href="#" class="hover:text-white">Home</a></li>
+        <li><a href="#" class="hover:text-white">About</a></li>
+        <li><a href="#" class="hover:text-white">Contact</a></li>
+        <li><a href="#" class="hover:text-white">Services</a></li>
+      </ul>
+    </div>
+
+    <!-- Follow Us -->
+    <div>
+      <h4 class="text-lg font-bold mb-4 tracking-widest">FOLLOW US</h4>
+      <div class="flex justify-center md:justify-start space-x-4 text-2xl">
+        <a href="#" class="hover:text-teal-400"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="hover:text-teal-400"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-teal-400"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-teal-400"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button onclick="scrollToTop()" class="absolute right-6 bottom-6 bg-teal-400 text-black p-3 rounded-full shadow-lg hover:bg-white transition">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
+    © 2025 YourProjectName. All rights reserved.
+  </div>
+</footer>
+
+<!-- Scroll to Top Script -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    window.scrollToTop = function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  });
+</script>
