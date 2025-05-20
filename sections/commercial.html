@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume | Shiva</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/include.js" defer></script>
+</head>
+<body class="bg-white">
+
+  <!-- navbar -->
+  <div include-html="navbar.html"></div>
+
+  <!-- Resume Page Content -->
+   <section class="mt-20 min-h-screen bg-teal-400 flex flex-col items-center justify-center px-4 text-center">
+    
+    <div>
+<!-- Back Arrow -->
+      <div class="w-full pt-10 max-w-6xl mx-auto flex justify-start ">
+        <a href="../index.html" class="text-3xl">
+          <i class="fas fa-arrow-left"></i>
+        </a>
+      </div>
+  
+      <!-- Resume Heading -->
+      <div class="border-8 mt-5 border-black px-80 py-7 mb-12">
+        
+        <h1 class="text-5xl font-extrabold tracking-widest">Commercial</h1>
+      </div>
+    </div>
+    
+
+    <!-- About Me Section -->
+    <div class="max-w-3xl mx-auto">
+      
+      <p class="text-sm max-w-xl mx-auto leading-relaxed">
+        I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story.
+      </p>
+    </div>
+
+       <div class="bg-teal-400 text-white font-sans">
+         <!-- Title -->
+  <h1 class="text-center text-black text-3xl font-extrabold py-10 tracking-widest uppercase">JOHN K. HOLTE - COMMERCIAL</h1>
+
+  <!-- Main Video Section -->
+  <div class="flex justify-center mb-10">
+    <iframe id="mainVideo" width="560" class="w-[900px] h-[500px]" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Youtube Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <!-- Search + Filter -->
+  <div class="flex  justify-around text-black font-bold gap-10 items-center mb-6">
+    <div class="relative">
+      <input type="text" placeholder="Search video..." class="px-4 py-2 pl-10 rounded bg-teal-400  placeholder-black focus:outline-none"/>
+      <span class="absolute left-3 top-2.5 ">🔍</span>
+    </div>
+    <select class="bg-teal-400   px-4 py-2 rounded">
+      <option>All Categories</option>
+      <option>Short Film</option>
+      <option>Documentary</option>
+      <option>Drama</option>
+    </select>
+  </div>
+
+  <!-- Thumbnails -->
+  <div class="flex justify-center gap-6 flex-wrap px-6 mb-10">
+     <div class="relative w-72 cursor-pointer group" data-video="https://www.youtube.com/embed/tgbNymZ7vqY">
+      <img src="https://img.youtube.com/vi/tgbNymZ7vqY/hqdefault.jpg" class="rounded w-full h-44 object-cover" />
+      <div class="absolute inset-0 bg-black bg-opacity-50 hidden group-hover:flex items-center justify-center">
+        <button class="bg-white text-black px-4 py-1 rounded">▶ Play Video</button>
+      </div>
+      <p class="absolute top-2 left-2 text-sm bg-black bg-opacity-60 px-2 py-1 rounded">Wanderlust (2023)</p>
+    </div>
+
+    <div class="relative w-72 cursor-pointer group" data-video="https://www.youtube.com/embed/aqz-KE-bpKQ">
+      <img src="https://img.youtube.com/vi/aqz-KE-bpKQ/hqdefault.jpg" class="rounded w-full h-44 object-cover" />
+      <div class="absolute inset-0 bg-black bg-opacity-50 hidden group-hover:flex items-center justify-center">
+        <button class="bg-white text-black px-4 py-1 rounded">▶ Play Video</button>
+      </div>
+      <p class="absolute top-2 left-2 text-sm bg-black bg-opacity-60 px-2 py-1 rounded">Wanderlust (2023)</p>
+    </div>
+
+    <div class="relative w-72 cursor-pointer group" data-video="https://www.youtube.com/embed/tgbNymZ7vqY">
+      <img src="https://img.youtube.com/vi/tgbNymZ7vqY/hqdefault.jpg" class="rounded w-full h-44 object-cover" />
+      <div class="absolute inset-0 bg-black bg-opacity-50 hidden group-hover:flex items-center justify-center">
+        <button class="bg-white text-black px-4 py-1 rounded">▶ Play Video</button>
+      </div>
+      <p class="absolute top-2 left-2 text-sm bg-black bg-opacity-60 px-2 py-1 rounded">California Dreaming (2023)</p>
+    </div>
+  </div>
+
+       </div>
+
+  </section>
+
+
+  <!-- footer -->
+  <div include-html="footer.html"></div>
+
+
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const thumbnails = document.querySelectorAll('[data-video]');
+    const iframe = document.querySelector('iframe');
+
+    thumbnails.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        const newSrc = thumb.getAttribute('data-video') + "?autoplay=1";
+        iframe.setAttribute('src', newSrc);
+      });
+    });
+  });
+</script>
+</body>
+</html>
